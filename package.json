@@ -1,0 +1,33 @@
+{
+  "name": "react-native-appgain-sdk",
+  "version": "1.0.0",
+  "description": "A Wrapper for our Appgain Sdk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appgain/react-native-appgain-sdk.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "react-native-component",
+    "react",
+    "react native",
+    "mobile",
+    "ios",
+    "Appgain",
+    "Appgain-SDK-Wrapper"
+  ],
+  "author": "Appgain.io",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/appgain/react-native-appgain-sdk.git/issues"
+  },
+  "homepage": "https://github.com/appgain/react-native-appgain-sdk.git#readme",
+  "devDependencies": {
+    "metro-react-native-babel-preset": "^0.58.0"
+  }
+}

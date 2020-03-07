@@ -1,0 +1,6 @@
+framework module Appgain {
+  umbrella header "Appgain-umbrella.h"
+
+  export *
+  module * { export * }
+}

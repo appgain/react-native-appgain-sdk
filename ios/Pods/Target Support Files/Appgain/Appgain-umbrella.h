@@ -12,6 +12,7 @@
 
 #import "Appgain.h"
 #import "DataModels.h"
+#import "LocationManger.h"
 #import "MobileLandingPage.h"
 #import "MobileLandingPageButton.h"
 #import "NotificationStatus.h"

@@ -10,6 +10,12 @@
 #endif
 #endif
 
+#import "CoreModulesPlugins.h"
+#import "RCTExceptionsManager.h"
+#import "RCTImageEditingManager.h"
+#import "RCTImageLoader.h"
+#import "RCTImageStoreManager.h"
+#import "RCTPlatform.h"
 #import "RCTAssert.h"
 #import "RCTBridge+Private.h"
 #import "RCTBridge.h"

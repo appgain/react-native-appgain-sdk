@@ -1,6 +1,6 @@
 
 import { NativeModules } from 'react-native';
 
-const { RNAppgainSdk } = NativeModules;
+const { AppgainSdk } = NativeModules;
 
-export default RNAppgainSdk;
+export default AppgainSdk;

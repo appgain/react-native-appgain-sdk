@@ -1,6 +1,6 @@
 {
   "name": "react-native-appgain-sdk",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A Wrapper for our Appgain Sdk",
   "main": "index.js",
   "scripts": {
@@ -29,5 +29,8 @@
   "homepage": "https://github.com/appgain/react-native-appgain-sdk.git#readme",
   "devDependencies": {
     "metro-react-native-babel-preset": "^0.58.0"
+  },
+  "dependencies": {
+    "react-native": "^0.61.5"
   }
 }

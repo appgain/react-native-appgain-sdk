@@ -9,15 +9,18 @@
 /// import all model you need
 #import "DataModels.h"
 #import <Parse/Parse.h>
+ #import <sys/utsname.h>
 #import "SdkKeys.h"
-
+#import "LocationManger.h"
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+#import <CoreTelephony/CTCarrier.h>
 @interface Appgain : NSObject
 
 //MARK: get current  user parser id
 +(NSString*)getUserID;
 
 //MARK: inialize sdk Data
-+(void)initializeAppWithID:( NSString* )appID andApiKey :(NSString*)appApiKey automaticConfiguration :(BOOL)configureAutomatic  whenFinish:(void (^)(NSURLResponse*, NSMutableDictionary*))onComplete ;
++(void)initializeAppWithID:( NSString* )appID andApiKey :(NSString*)appApiKey automaticConfiguration :(BOOL)configureAutomatic  whenFinish:(void (^)(NSURLResponse*, NSMutableDictionary*,NSError *))onComplete ;
 
 //MARK: inialize sdk Data with client id
 //+(void)initializeAppWithClientID:( NSString* )clientId andAppId :(NSString*)appId andApiKey :(NSString*)appApiKey  whenFinish:(void (^)(NSURLResponse*, NSMutableDictionary*))onComplete ;
@@ -34,24 +37,24 @@
 
 
 //MARK: create smartlink for mobile
-+(void)CreateSmartLinkWithObject:( SmartDeepLink*)linkObject whenFinish:(void (^)(NSURLResponse*, NSMutableDictionary*))onComplete;
++(void)CreateSmartLinkWithObject:( SmartDeepLink*)linkObject whenFinish:(void (^)(NSURLResponse*, NSMutableDictionary*,NSError *))onComplete;
 
 
 //MARK: check match link for deep linking
-+(void)CreateLinkMactcherWithUserID :(NSString *)userID whenFinish:(void (^)(NSURLResponse*, NSMutableDictionary*))onComplete;
++(void)CreateLinkMactcherWithUserID :(NSString *)userID whenFinish:(void (^)(NSURLResponse*, NSMutableDictionary*,NSError *))onComplete;
 
 //MARK: create single and slider landing mobile page
-+(void)createLandingPageWithObject:(MobileLandingPage *)landingPage whenFinish:(void (^)(NSURLResponse*, NSMutableDictionary*))onComplete;
++(void)createLandingPageWithObject:(MobileLandingPage *)landingPage whenFinish:(void (^)(NSURLResponse*, NSMutableDictionary*,NSError *))onComplete;
 
 
 //MARK: create trigger point for user
-+(void)CreateAutomatorWithTrigger :(NSString*) trigger andUserId :(NSString*)userID whenFinish:(void (^)(NSURLResponse*, NSMutableDictionary*))onComplete;
++(void)CreateAutomatorWithTrigger :(NSString*) trigger andUserId :(NSString*)userID whenFinish:(void (^)(NSURLResponse*, NSMutableDictionary*,NSError *))onComplete;
 
 //MARK: create trigger point for user with custom extra parameter
-+(void)CreateAutomatorWithTrigger:(NSString *)trigger andUserId:(NSString *)userID andParameters:(NSMutableDictionary*) Parameters whenFinish:(void (^)(NSURLResponse*, NSMutableDictionary*))onComplete;
++(void)CreateAutomatorWithTrigger:(NSString *)trigger andUserId:(NSString *)userID andParameters:(NSMutableDictionary*) Parameters whenFinish:(void (^)(NSURLResponse*, NSMutableDictionary*,NSError *))onComplete;
 
 //MARK: sent notification status for server.
-+(void)trackNotificationWithAction:(NSString*)action andUserInfo:(NSDictionary *) userInfo whenFinish:(void (^)(NSURLResponse*, NSMutableDictionary*))onComplete;
++(void)trackNotificationWithAction:(NSString*)action andUserInfo:(NSDictionary *) userInfo whenFinish:(void (^)(NSURLResponse*, NSMutableDictionary*,NSError *))onComplete;
 
 
 //MARK: update parser user id with app user id
@@ -78,4 +81,10 @@
 
 +(void)signUpWithUser : (PFUser*) user whenFinish:(void (^)(BOOL, NSError*))onComplete;
 +(void)skipUserLogin;
+
++(void)logEventForAction:(NSString*)action andType :(NSString*) type whenFinish:(void (^)(NSURLResponse*, NSMutableDictionary*,NSError *))onComplete;
+
++(void)updateUserProfileFor : (PFUser*) user whenFinish:(void (^)(BOOL, NSError*))onComplete;
+
+
 @end

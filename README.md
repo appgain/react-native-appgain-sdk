@@ -22,9 +22,9 @@
 
 ## Usage
 ```javascript
-import RNAppgainSdk from 'react-native-appgain-sdk';
+import AppgainSdk from 'react-native-appgain-sdk';
 
 // TODO: What to do with the module?
-RNAppgainSdk;
+AppgainSdk;
 ```
   
